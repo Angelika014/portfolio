@@ -19,12 +19,8 @@ jobs:
         run: |
           staticrypt marketing.html \
             --password "${{ secrets.PAGE_PASSWORD }}" \
-            --output marketing.html \
-            --short \
-            --template-title "Dostęp chroniony" \
-            --template-instructions "Wpisz hasło aby zobaczyć tę stronę." \
-            --template-placeholder "Hasło" \
-            --template-button "Wejdź"
+            --directory . \
+            --remember 0
 
       - name: Commit encrypted files
         run: |
