@@ -15,9 +15,9 @@ jobs:
       - name: Install StatiCrypt
         run: npm install -g staticrypt
 
-      - name: Encrypt marketing.html
+      - name: Encrypt protected pages
         run: |
-          staticrypt marketing.html \
+          staticrypt marketing.html marketing-ai-b2b.html \
             --password "${{ secrets.PAGE_PASSWORD }}" \
             --directory . \
             --remember 0
