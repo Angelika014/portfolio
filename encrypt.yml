@@ -1,0 +1,33 @@
+name: Encrypt protected pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  encrypt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install StatiCrypt
+        run: npm install -g staticrypt
+
+      - name: Encrypt marketing.html
+        run: |
+          staticrypt marketing.html \
+            --password "${{ secrets.PAGE_PASSWORD }}" \
+            --output marketing.html \
+            --short \
+            --template-title "Dostęp chroniony" \
+            --template-instructions "Wpisz hasło aby zobaczyć tę stronę." \
+            --template-placeholder "Hasło" \
+            --template-button "Wejdź"
+
+      - name: Commit encrypted files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add marketing.html
+          git diff --staged --quiet || git commit -m "Auto-encrypt protected pages"
+          git push
