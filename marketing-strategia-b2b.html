@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategia komunikacji marki B2B — Angelika Wodnicka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .doc-section {
+      margin-bottom: 3.5rem;
+    }
+    .doc-section h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--green);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-section h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 1.25rem 0 0.5rem;
+    }
+    .doc-section p {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+    .doc-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 1rem;
+    }
+    .doc-section ul li {
+      color: var(--text-muted);
+      font-size: 0.93rem;
+      padding: 0.3rem 0 0.3rem 1.25rem;
+      position: relative;
+    }
+    .doc-section ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: var(--green-light);
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .col-block {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .col-block h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--green);
+      margin-bottom: 0.75rem;
+    }
+    .kpi-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.75rem;
+    }
+    .kpi-item {
+      background: var(--green-pale);
+      color: var(--green);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .pillar-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .pillar-card .pillar-num {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green-light);
+      margin-bottom: 0.5rem;
+    }
+    .pillar-card h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .pillar-card p {
+      font-size: 0.87rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .quote-block {
+      background: var(--green-pale);
+      border-left: 3px solid var(--green);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+    }
+    .quote-block p {
+      color: var(--green);
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .quote-block .quote-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--green-light);
+      margin-bottom: 0.4rem;
+    }
+    .examples-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .example-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .example-card .channel {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .example-card p {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-style: italic;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .do-dont {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-top: 1rem;
+    }
+    .do-block, .dont-block {
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .do-block {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+    }
+    .dont-block {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+    }
+    .do-block h4 { color: var(--green); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+    .dont-block h4 { color: #dc2626; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+    .do-block ul li::before { color: var(--green); content: "✓"; }
+    .dont-block ul li::before { color: #dc2626; content: "✗"; }
+    .do-block ul li, .dont-block ul li { color: var(--text-muted); font-size: 0.87rem; }
+    @media (max-width: 640px) {
+      .two-col, .do-dont { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <span class="logo">AW</span>
+      <ul>
+        <li><a href="index.html#o-mnie">O mnie</a></li>
+        <li><a href="index.html#projekty">Projekty</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div style="max-width:1000px;margin:0 auto;padding:0 2rem;">
+      <a href="marketing.html" class="back">← Digital Marketing</a>
+      <p class="hero-tag" style="margin-top:1rem;">Projekt strategiczny</p>
+      <h1>Strategia komunikacji marki B2B</h1>
+      <p>Opracowanie spójnej strategii komunikacji dla marki z branży oświetlenia ewakuacyjnego — od analizy obecnej komunikacji po tone of voice i kluczowe komunikaty.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
+        <span class="kpi-item">Brand Communication</span>
+        <span class="kpi-item">Tone of Voice</span>
+        <span class="kpi-item">B2B</span>
+        <span class="kpi-item">Content Strategy</span>
+        <span class="kpi-item">Copywriting</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-content">
+
+    <!-- Executive Summary -->
+    <div class="doc-section">
+      <h2>Executive Summary</h2>
+      <p>Projekt polegał na opracowaniu spójnej strategii komunikacji dla marki działającej w branży oświetlenia ewakuacyjnego i awaryjnego, na podstawie analizy publicznie dostępnych materiałów.</p>
+      <p>Przeprowadzona analiza wykazała, że obecna komunikacja koncentruje się głównie na parametrach technicznych i normach, co utrudnia szybkie zrozumienie wartości oferty przez klientów B2B.</p>
+      <div class="two-col">
+        <div class="col-block">
+          <h4>Zakres projektu</h4>
+          <ul>
+            <li>Nowy tone of voice</li>
+            <li>Zestaw zasad komunikacji</li>
+            <li>Kluczowe komunikaty oparte na korzyściach</li>
+            <li>Przykłady wdrożenia w kanałach</li>
+          </ul>
+        </div>
+        <div class="col-block">
+          <h4>Główna zmiana</h4>
+          <ul>
+            <li>Z komunikacji produktowej</li>
+            <li>Na komunikację opartą o efekty</li>
+            <li>Bezpieczeństwo i zgodność z normami</li>
+            <li>Język korzyści biznesowych</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Analiza -->
+    <div class="doc-section">
+      <h2>01 — Analiza obecnej komunikacji</h2>
+      <p>Analiza strony internetowej i materiałów produktowych ujawniła kilka kluczowych problemów komunikacyjnych.</p>
+      <div class="two-col">
+        <div class="col-block">
+          <h4>Główne obserwacje</h4>
+          <ul>
+            <li>Dominacja języka technicznego i normatywnego</li>
+            <li>Komunikacja skupiona na produkcie, nie użytkowniku</li>
+            <li>Brak wyraźnej propozycji wartości</li>
+            <li>Niska czytelność dla osób nietechnicznych</li>
+          </ul>
+        </div>
+        <div class="col-block">
+          <h4>Wniosek</h4>
+          <p style="font-size:0.9rem;">Obecna komunikacja wymaga od odbiorcy dodatkowego wysiłku interpretacyjnego — klient musi sam przełożyć parametry techniczne na realne korzyści biznesowe.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grupa docelowa -->
+    <div class="doc-section">
+      <h2>02 — Grupa docelowa</h2>
+      <div class="two-col">
+        <div class="col-block">
+          <h4>Segmenty odbiorców</h4>
+          <ul>
+            <li>Projektanci instalacji</li>
+            <li>Wykonawcy</li>
+            <li>Zarządcy nieruchomości</li>
+            <li>Działy techniczne</li>
+          </ul>
+        </div>
+        <div class="col-block">
+          <h4>Kluczowe potrzeby</h4>
+          <ul>
+            <li>Zgodność z normami i przepisami</li>
+            <li>Minimalizacja ryzyka błędów</li>
+            <li>Sprawny proces odbioru inwestycji</li>
+            <li>Szybki dostęp do informacji</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tone of Voice -->
+    <div class="doc-section">
+      <h2>03 — Tone of Voice</h2>
+      <p>Komunikacja powinna budować wizerunek marki jako eksperta, który upraszcza złożone zagadnienia techniczne — nie komplikuje ich.</p>
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <div class="pillar-num">Cecha 01</div>
+          <h4>Ekspercki, ale przystępny</h4>
+          <p>Wiedza i doświadczenie branżowe bez hermetycznego żargonu. Odbiorca rozumie od razu.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">Cecha 02</div>
+          <h4>Konkretny i rzeczowy</h4>
+          <p>Każde zdanie niesie wartość. Bez ogólników i pustych deklaracji marketingowych.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">Cecha 03</div>
+          <h4>Spokojny i pewny</h4>
+          <p>Ton budujący zaufanie — marka wie co robi i nie musi tego krzyczeć.</p>
+        </div>
+      </div>
+      <div class="quote-block" style="margin-top:1.5rem;">
+        <div class="quote-label">Przykład tonu</div>
+        <p>„Masz pewność, że instalacja spełnia wymagania i przejdzie odbiór."</p>
+      </div>
+    </div>
+
+    <!-- Zasady komunikacji -->
+    <div class="doc-section">
+      <h2>04 — Zasady komunikacji</h2>
+      <div class="do-dont">
+        <div class="do-block">
+          <h4>Co komunikujemy</h4>
+          <ul>
+            <li>Efekty — bezpieczeństwo, zgodność, niezawodność</li>
+            <li>Konkretne korzyści dla użytkownika</li>
+            <li>Uproszczone wyjaśnienia aspektów technicznych</li>
+          </ul>
+        </div>
+        <div class="dont-block">
+          <h4>Czego unikamy</h4>
+          <ul>
+            <li>Nadmiaru parametrów bez kontekstu</li>
+            <li>Marketingowych ogólników</li>
+            <li>Hermetycznego języka branżowego</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kluczowe komunikaty -->
+    <div class="doc-section">
+      <h2>05 — Kluczowe komunikaty</h2>
+      <div class="quote-block">
+        <div class="quote-label">Propozycja wartości</div>
+        <p>„Rozwiązania oświetlenia ewakuacyjnego, które zapewniają bezpieczeństwo i bezproblemowy odbiór instalacji."</p>
+      </div>
+      <h3>Filary komunikacji</h3>
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <div class="pillar-num">Filar 01</div>
+          <h4>Zgodność z normami</h4>
+          <p>Eliminacja ryzyka błędów formalnych. Klient ma pewność że instalacja przejdzie odbiór bez problemów.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">Filar 02</div>
+          <h4>Niezawodność</h4>
+          <p>Działanie w sytuacjach krytycznych. Produkt który nie zawodzi gdy jest najbardziej potrzebny.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-num">Filar 03</div>
+          <h4>Wsparcie techniczne</h4>
+          <p>Pomoc na etapie projektu i wdrożenia. Ekspert dostępny wtedy, gdy klient potrzebuje odpowiedzi.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Przykłady -->
+    <div class="doc-section">
+      <h2>06 — Przykłady zastosowania</h2>
+      <div class="examples-grid">
+        <div class="example-card">
+          <div class="channel">Strona www — hero</div>
+          <p>„Oświetlenie ewakuacyjne, które przechodzi odbiory bez problemów."</p>
+        </div>
+        <div class="example-card">
+          <div class="channel">Opis produktu</div>
+          <p>„Rozwiązanie zaprojektowane z myślą o zgodności z obowiązującymi normami i łatwej integracji z projektem."</p>
+        </div>
+        <div class="example-card">
+          <div class="channel">LinkedIn</div>
+          <p>„Jednym z najczęstszych powodów opóźnień inwestycji są problemy z odbiorem instalacji. Sprawdź, jak ich uniknąć."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Podsumowanie -->
+    <div class="doc-section">
+      <h2>07 — Wartość projektu</h2>
+      <p>Projekt pokazuje w jaki sposób komunikację techniczną można przekształcić w komunikację zorientowaną na biznes — upraszczając przekaz bez utraty eksperckości i tworząc spójny system komunikacji dla marki B2B.</p>
+      <div class="kpi-row">
+        <span class="kpi-item">Analiza komunikacji</span>
+        <span class="kpi-item">Tone of Voice</span>
+        <span class="kpi-item">Propozycja wartości</span>
+        <span class="kpi-item">Copywriting B2B</span>
+        <span class="kpi-item">Brand Strategy</span>
+      </div>
+      <p style="margin-top:1.5rem;font-size:0.82rem;color:#9ca3af;">Projekt opracowany na podstawie publicznie dostępnych materiałów. Ma charakter koncepcyjny.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 Angelika Wodnicka</p>
+  </footer>
+
+</body>
+</html>
